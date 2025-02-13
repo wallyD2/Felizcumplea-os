@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes de la Familia</title>
+    <link rel="stylesheet" href="mensajes.css">
+</head>
+<body>
+    <h1 class="titulo">💌 Mensajes Especiales 💌</h1>
+
+    <div class="mensaje-container">
+        <!-- Tarjetas de mensajes -->
+        <div class="mensaje-card" onclick="mostrarMensaje('nano')">
+            <p class="titulo-mensaje">Nano 💖</p>
+        </div>
+        <div class="mensaje-card" onclick="mostrarMensaje('mama')">
+            <p class="titulo-mensaje">Mama 💐</p>
+        </div>
+        <div class="mensaje-card" onclick="mostrarMensaje('lore')">
+            <p class="titulo-mensaje">Lore 💫</p>
+        </div>
+        <div class="mensaje-card" onclick="mostrarMensaje('lara')">
+            <p class="titulo-mensaje">Lara 👑</p>
+        </div>
+    </div>
+
+    <!-- Mensajes que se muestran al hacer clic -->
+    <div id="mensaje-nano" class="mensaje-documento">
+        <p><strong>Nano:</strong> Hola hermanita, te quiero mucho, espero que lo pases genial y que disfrutes tu día especial. ❤️🎉</p>
+        <button class="cerrar-btn" onclick="cerrarMensaje('nano')">Cerrar</button>
+    </div>
+    <div id="mensaje-mama" class="mensaje-documento">
+        <p><strong>Mama:</strong> Te quiero mucho hija. 💖👩‍👧</p>
+        <button class="cerrar-btn" onclick="cerrarMensaje('mama')">Cerrar</button>
+    </div>
+    <div id="mensaje-lore" class="mensaje-documento">
+        <p><strong>Lore:</strong> Te quiero mucho hermana, sigue así que Dios te bendiga, eres la mejor. 🙏💖✨</p>
+        <button class="cerrar-btn" onclick="cerrarMensaje('lore')">Cerrar</button>
+    </div>
+    <div id="mensaje-lara" class="mensaje-documento">
+        <p><strong>Lara:</strong> Feliz cumpleaños Reina! Vos no me conoces, pero soy la novia de Nano. Lo poco que sé de vos es lo que Nano me cuenta, pero de eso sé que sos una hermana increíble y una mujer muy fuerte y hermosa. Espero que la pases muy especial en tu día, y que jamás olvides lo hermosa que haces la vida de Nano y tu familia. 👑💐💖</p>
+        <button class="cerrar-btn" onclick="cerrarMensaje('lara')">Cerrar</button>
+    </div>
+
+    <script>
+        function mostrarMensaje(id) {
+            document.getElementById("mensaje-" + id).style.display = "block";
+        }
+
+        function cerrarMensaje(id) {
+            document.getElementById("mensaje-" + id).style.display = "none";
+        }
+    </script>
+</body>
+</html>

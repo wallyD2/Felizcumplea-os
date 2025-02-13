@@ -1,0 +1,130 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ff92c2);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Explosión de serpentinas */
+@keyframes confetti {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.confetti {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #ff0, #ff4500);
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: confetti 2.5s ease-out forwards;
+}
+
+/* Animación del título */
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    color: #fff;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+    animation: fadeInScale 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* Animación del regalo */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.regalo {
+    text-align: center;
+    font-size: 5em;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    animation: bounce 1s infinite;
+}
+
+.regalo:hover {
+    transform: scale(1.1);
+}
+
+/* Animación de los mensajes */
+.mensajes {
+    text-align: center;
+    margin-top: 40px;
+}
+
+@keyframes abrirSobre {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.sobre {
+    font-size: 4em;
+    cursor: pointer;
+    animation: abrirSobre 1.5s infinite;
+}
+
+.sobre:hover {
+    transform: scale(1.3);
+}
+
+/* Página de imágenes - Estilo más hermoso */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 1.5s ease-in-out;
+    justify-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    filter: brightness(0.9) contrast(1.1);
+    border: 5px solid gold;
+    padding: 5px;
+    background: #fffaf0;
+}
+
+.galeria img:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 12px 24px rgba(255, 215, 0, 0.6);
+    filter: brightness(1) contrast(1.2);
+}
+
+/* Ajuste de espaciado para evitar espacio vacío */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+
